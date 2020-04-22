@@ -14,4 +14,4 @@ expected:
       rules:
         - name: validate-resources
           type: Validation
-          success: true 
+          success: false 

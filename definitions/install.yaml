@@ -20,7 +20,6 @@ spec:
   validation:
     openAPIV3Schema:
       properties:
-        status: {}
         spec:
           required:
           - rules
@@ -39,7 +38,6 @@ spec:
                 type: object
                 required:
                 - name
-                - match
                 properties:
                   name:
                     type: string
@@ -210,6 +208,18 @@ spec:
                         AnyValue: {}
                       anyPattern:
                         AnyValue: {}
+                      deny:
+                        properties:
+                          allRequests:
+                            type: boolean
+                          conditions:
+                            type: array
+                            items:
+                              type: object
+                              required:
+                                - key  # can be of any type
+                                - operator # typed
+                                - value # can be of any type
                   generate:
                     type: object
                     required:

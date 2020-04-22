@@ -31,4 +31,5 @@ spec:
                 cpu: "?*"
               limits:
                 memory: "?*"
+                cpu: "?*"
 ````
