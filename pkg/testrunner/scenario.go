@@ -196,7 +196,7 @@ func validateResource(t *testing.T, responseResource unstructured.Unstructured, 
 	// load expected resource
 	expectedResource := loadPolicyResource(t, expectedResourceFile)
 	if expectedResource == nil {
-		t.Log("failed to get the expected resource")
+		t.Logf("failed to get the expected resource : %s", expectedResourceFile)
 		return
 	}
 
